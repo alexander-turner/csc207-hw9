@@ -25,6 +25,11 @@ import java.util.Stack;
 public class RPN {
 
     /**
+     * RPN calculator.
+     * @preconditions 
+     *  Input of format %lf ... %lf op, where op belongs to {+,-,*,/,^,p,s,c}.
+     * @postconditions
+     *  Evaluates the reverse Polish notation expression.
      * @param args
      */
     public static void main(String[] args) {
@@ -35,7 +40,7 @@ public class RPN {
 	double temp = 0;
 
 	while (reader.hasNext()) {
-	    // read in real numbers
+	    // read real numbers
 	    if (reader.hasNextDouble()) {
 		numbers.push(reader.nextDouble());
 	    } else {
